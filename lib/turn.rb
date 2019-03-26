@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a35d14d2d5cbbef12c7dce7b0e970b1c2a62dfe
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -16,6 +20,7 @@ def move (array, index, value = "X")
 end
 
 def valid_move? (board, index)
+<<<<<<< HEAD
   if board[index]  == "X" || board[index] == "O" || index < 0 || index > 8
   false
   elsif board[index] == " " || board[index] == "" || board[index] == nil && index.between?(0, 8)
@@ -35,3 +40,16 @@ def turn (board)
   turn(board)
   end
 end
+=======
+  if board[index] == " " || board[index] == "" || board[index] == nil && index.between?(0, 8)
+  true
+  elsif board[index]  == "X" || board[index] == "O" || index <= -1 || index > 8
+  false
+  end
+end
+
+board1 = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
+puts valid_move?(board1, 0)
+puts valid_move?(board1, 4)
+puts valid_move?(board1, -1)    
+>>>>>>> 1a35d14d2d5cbbef12c7dce7b0e970b1c2a62dfe
